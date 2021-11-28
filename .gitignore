@@ -36,3 +36,4 @@ build/
 /out/
 /web/package-lock.json
 /web/yarn.lock
+/web/dist/
