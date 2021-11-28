@@ -35,3 +35,4 @@ build/
 /web/node_modules/
 /out/
 /web/package-lock.json
+/web/yarn.lock
