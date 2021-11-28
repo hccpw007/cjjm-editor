@@ -34,3 +34,4 @@ build/
 /web/node_modules/
 /web/node_modules/
 /out/
+/web/package-lock.json
