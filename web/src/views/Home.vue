@@ -1,18 +1,37 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
-  </div>
+    <div class="home" id="cccxx">
+        <div style="background-color: cadetblue;height: 100px;width: 100%" ></div>
+        <!--<div style="background-color: green;height: 100%;width: 100%" ></div>-->
+        <HomeMain></HomeMain>
+    </div>
 </template>
 
 <script lang="ts">
-import { Options, Vue } from 'vue-class-component';
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
+    import {Options, Vue} from 'vue-class-component';
+    import HomeHeader from '@/components/home/header.vue'
+    import HomeMain from '@/components/home/main.vue'
+    import HomeMenu from '@/components/home/menu.vue'
 
-@Options({
-  components: {
-    HelloWorld,
-  },
-})
-export default class Home extends Vue {}
+    @Options({
+        components: {
+            HomeHeader,
+            HomeMain,
+            HomeMenu
+        },
+    })
+    export default class Home extends Vue {
+    }
 </script>
+<style scoped>
+    .home {
+        width: 100%;
+        height: 100%;
+        background-color: cadetblue;
+    }
+    #cccxx {
+        width: 100%;
+        height: 100%;
+        background-color: cadetblue;
+    }
+    
+</style>
