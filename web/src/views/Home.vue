@@ -1,37 +1,68 @@
 <template>
-    <div class="home" id="cccxx">
-        <div style="background-color: cadetblue;height: 100px;width: 100%" ></div>
-        <!--<div style="background-color: green;height: 100%;width: 100%" ></div>-->
-        <HomeMain></HomeMain>
+    <div class="container">
+        <div class="left">
+            <HomeLeft></HomeLeft>
+        </div>
+        <div class="right">
+            <div class="header">
+                <HomeHeader></HomeHeader>
+            </div>
+            <div class="main">
+                <HomeMain></HomeMain>
+            </div>
+        </div>
     </div>
+    <div class="footer"></div>
 </template>
+<style scoped>
+    .container {
+        display: flex;
+        height: calc(100% - 40px);
+        width: 100%;
+    }
+    
+    .left {
+        height: 100%;
+        width: 200px;
+    }
+    
+    .right {
+        height: 100%;
+        width: 100%;
+    }
+    
+    .header {
+        height: 60px;
+        width: 100%;
+        background-color: antiquewhite;
+    }
+    
+    .main {
+        height: calc(100% - 60px);
+        width: 100%;
+        background-color: aquamarine;
+    }
+    
+    .footer {
+        width: 100%;
+        background-color: aqua;
+        height: 40px;
+    }
+</style>
 
 <script lang="ts">
     import {Options, Vue} from 'vue-class-component';
-    import HomeHeader from '@/components/home/header.vue'
     import HomeMain from '@/components/home/main.vue'
-    import HomeMenu from '@/components/home/menu.vue'
+    import HomeHeader from '@/components/home/header.vue'
+    import HomeLeft from '@/components/home/left.vue'
 
     @Options({
         components: {
             HomeHeader,
             HomeMain,
-            HomeMenu
+            HomeLeft
         },
     })
     export default class Home extends Vue {
     }
 </script>
-<style scoped>
-    .home {
-        width: 100%;
-        height: 100%;
-        background-color: cadetblue;
-    }
-    #cccxx {
-        width: 100%;
-        height: 100%;
-        background-color: cadetblue;
-    }
-    
-</style>

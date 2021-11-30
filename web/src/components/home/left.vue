@@ -10,6 +10,8 @@
                 aaaa: 'dsafafasfa'
             }
         },
+        methods:{
+        }
     }
 </script>
 
